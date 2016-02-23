@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<meta name="viewport" content="width=device-width">
+	<title>Maquetación Responsive</title>
+
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+</head>
+<body onload="dialogo();">
+
+	<div class="container">
+		<header>
+			<figure class="logo">
+				<img src="images/logo.jpg" alt="logo de la empresa">
+			</figure>
+
+			<a href="javascript:;" class="toggle-button">
+				<span></span>
+			</a>
+
+			<nav>
+				<ul>
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">QUIENES</a></li>
+					<li><a href="#">SERVICIOS</a></li>
+					<li><a href="#">PORTFOLIO</a></li>
+					<li><a href="#">SUCURSALES</a></li>
+					<li><a href="#">CONTACTO</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="banner">
+			<img src="images/img-banner.jpg" alt="banner publicitario">
+		</div>
+
+		<div class="video">
+			<iframe src="https://www.youtube.com/embed/_93kDSPlKIM" allowfullscreen></iframe>
+		</div>
+
+		<div class="perfiles">
+			<h2>Lorem ipsum amet</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In modi, quo, vel illum qui provident voluptas? Magni totam.</p>
+
+			<figure>
+				<img src="images/img-profile-1.jpg" alt="perfil 1">
+			</figure>
+
+			<figure>
+				<img src="images/img-profile-2.jpg" alt="perfil 2">
+			</figure>
+
+			<figure>
+				<img src="images/img-profile-1.jpg" alt="perfil 1">
+			</figure>
+
+			<figure>
+				<img src="images/img-profile-2.jpg" alt="perfil 2">
+			</figure>
+
+			<figure>
+				<img src="images/img-profile-1.jpg" alt="perfil 1">
+			</figure>
+
+			<figure>
+				<img src="images/img-profile-2.jpg" alt="perfil 2">
+			</figure>
+
+			<figure>
+				<img src="images/img-profile-1.jpg" alt="perfil 1">
+			</figure>
+
+			<figure>
+				<img src="images/img-profile-2.jpg" alt="perfil 2">
+			</figure>
+		</div>
+
+		<div class="productos-vip">
+			<div class="producto">
+				<img src="images/img--pdto-1.jpg" alt="producto">
+				<h2>Lorem ipsum amet</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In modi, quo, vel illum qui provident voluptas? Magni totam.</p>
+				<a href="#">ver más</a>
+			</div>
+
+			<div class="producto">
+				<img src="images/img--pdto-2.jpg" alt="producto">
+				<h2>Lorem ipsum amet</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In modi, quo, vel illum qui provident voluptas? Magni totam.</p>
+				<a href="#">ver más</a>
+			</div>
+
+			<div class="producto">
+				<img src="images/img--pdto-3.jpg" alt="producto">
+				<h2>Lorem ipsum amet</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In modi, quo, vel illum qui provident voluptas? Magni totam.</p>
+				<a href="#">ver más</a>
+			</div>
+
+			<div class="producto">
+				<img src="images/img--pdto-1.jpg" alt="producto">
+				<h2>Lorem ipsum amet</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In modi, quo, vel illum qui provident voluptas? Magni totam.</p>
+				<a href="#">ver más</a>
+			</div>
+
+			<div class="producto">
+				<img src="images/img--pdto-2.jpg" alt="producto">
+				<h2>Lorem ipsum amet</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In modi, quo, vel illum qui provident voluptas? Magni totam.</p>
+				<a href="#">ver más</a>
+			</div>
+
+			<div class="producto">
+				<img src="images/img--pdto-3.jpg" alt="producto">
+				<h2>Lorem ipsum amet</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In modi, quo, vel illum qui provident voluptas? Magni totam.</p>
+				<a href="#">ver más</a>
+			</div>
+		</div>
+
+		<footer>
+			<ul>
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">QUIENES</a></li>
+				<li><a href="#">SERVICIOS</a></li>
+				<li><a href="#">PORTFOLIO</a></li>
+				<li><a href="#">SUCURSALES</a></li>
+				<li><a href="#">CONTACTO</a></li>
+			</ul>
+		</footer>
+	</div>
+	<div id="dialogo"><p>Atención:Los enlaces de esta pagina no son funcionales, este proyecto es solo una plantilla de un index,que construi con html5 y csss 3, y es RESPONSIVE.</p></div>
+
+	<!-- Librería de jQuery para generar alternar la visualización del nav -->
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<!-- Genero la función que me permite definir el evento "click" -->
+	<script>
+		$('.toggle-button').click(function(){
+			$('nav').slideToggle('700');
+		});
+	</script>
+	<script>
+		function dialogo() {
+		$( "#dialogo" ).dialog({
+			  modal: true,
+			  show: { effect: "blind", duration: 800 },
+			  dialogClass: "no-close",
+  buttons: [
+    {
+      text: "OK",
+      click: function() {
+        $( this ).dialog( "close" );
+      }
+    }
+  ]
+			});
+		
+		}
+	</script>
+</body>
+</html>

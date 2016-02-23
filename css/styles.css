@@ -1,0 +1,349 @@
+*{
+	box-sizing: border-box;
+	/* hace que el padding y el border no se sume como tamaño adicional */
+}
+
+body{
+	font-family: Tahoma;
+	font-size: 13px;
+	background: url(../images/bg-body.png);
+	margin: 0;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active{
+	text-decoration: none;
+	outline: none;
+}
+
+img{
+	width: 100%;
+	/* sirve para hacer imágenes líquidas */
+}
+
+ul,
+ol{
+	list-style: none; /* quitamos la viñeta */
+	margin: 0; 
+	padding: 0;
+}
+
+.container{
+	width: 92%;
+	max-width: 960px;
+	margin: auto;
+	/*border: dotted 1px red;*/
+}
+
+.logo{
+	width: 140px;
+	margin:15px auto 30px;
+	border-radius: 50%;
+	overflow: hidden; /* oculta las esquinas de la imagen que se salen del contenedor */
+	border: solid 1px #333;
+	box-shadow: 0 0 10px #333;
+}
+
+.toggle-button{
+	display: block;
+	width: 45px;
+	padding: 10px;
+	background-color: #333;
+	margin: auto;
+}
+
+.toggle-button span{
+	display: block;
+	height: 25px;
+	border-top: solid 2px #fff;
+	border-bottom: solid 2px #fff;
+	position: relative;
+}
+
+.toggle-button span:after{
+	content: '';
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -1px;
+}
+
+nav{
+	margin-top: 5%;
+	display: none;
+}
+
+nav a{
+	display: block;
+	background-color: #333;
+	color: #fff;
+	font-size: 1.4em;
+	padding: 1.2em;
+	border-bottom: solid 1px #fff;
+	-webkit-transition: 1s; /* Safari */
+    transition:  1s;
+
+}
+nav a:hover{
+	
+	background-color: #8B0000;
+}
+.banner{
+	display: none;
+	-webkit-transition: 1s; /* Safari */
+    transition:  1s;
+}
+.banner:hover{
+	opacity: 0.8;
+
+}
+.video{
+	margin-top: 5%;
+	position: relative;
+	padding-top: 50%;
+}
+
+
+.video iframe{
+	width: 100%;
+	height: 100%;
+	border: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.perfiles{
+	margin-top: 5%;
+	overflow: hidden; /* para que los elementos que flotan no se salgan de la caja contenedora*/
+}
+
+.perfiles h2,
+.producto h2{
+	margin: 0 0 0.5em;
+	font-size: 2.4em;
+}
+
+.perfiles p,
+.producto p{
+	font-size: 1.4em; /* 13px */
+	line-height: 1.46em; /* 19px */
+}
+
+.perfiles figure{
+	margin: 0 4% 4% 0;
+	float: left;
+	width: 48%;
+	-webkit-transition: 3s; /* Safari */
+    transition:  3s;
+}
+.perfiles figure:hover{
+	-ms-transform: rotate(360deg); /* IE 9 */
+    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
+    transform: rotate(360deg);
+} 
+
+/* elimina el márgen lateral derecho de cada 2 figure */
+.perfiles figure:nth-of-type(2n){
+	margin-right: 0;
+}
+
+/*
+
+este pseudo selector ejecuta una operación matemática:
+
+	2(0) = 0
+	2(1) = 2
+	2(2) = 4
+	2(3) = 6
+	2(4) = 8
+
+*/
+
+
+/*
+
+para saber un poco más de estos pseudo selectores podemos leer:
+
+http://librosweb.es/libro/css_avanzado/capitulo_3/selectores_de_css_3.html
+
+
+*/
+
+.producto{
+	margin-bottom: 6%;
+}
+.producto img:hover{
+	opacity: 0.6;
+}
+.producto a{
+	background-color: #333;
+	color: #fff;
+	font-size: 1.4em;
+	display: inline-block; /* elemento de semibloque, recibe anchos, altos, rellenos y márgenes*/
+	padding: 1em 1.5em;
+}
+.producto a:hover{
+	background: #8B0000;
+	-webkit-transition: 1s; /* Safari */
+    transition:  1s;	
+}
+footer{
+	background-color: #A31325;
+	border-radius: 10px 10px 0 0;
+}
+
+footer a{
+	display: block;
+	border-bottom: solid 1px #fff;
+	font-size: 1.4em;
+	text-align: center;
+	color: #fff;
+	padding: 1.2em 0;
+}
+.no-close .ui-dialog-titlebar-close .ui-dialog-titlebar{
+  display: block;
+}
+
+
+
+
+
+@media screen and (min-width: 530px){
+	body{
+		font-size: 11px;
+	}
+	.container{
+		width: 100%;
+	}
+	.toggle-button{
+		display: none;
+	}
+
+	nav{
+		display: block !important;
+	}
+
+	nav ul,
+	.productos-vip{
+		overflow: hidden;
+		/*solución para limpiar la flotación de los elementos internos que flotan*/
+	}	
+
+	nav ul li{
+		float: left;
+		width: 14.583333333333%;
+		margin: 0 1.041666666667%
+	}
+
+	nav a{
+		font-size: 1.1em;
+		padding: 1.2em 0;
+		text-align: center;
+		border-bottom: none;
+	}
+
+	.banner{
+		display: block;
+		margin: 4% 1.041666666667% 0;
+	}
+
+	.video,
+	.perfiles,
+	.productos-vip,
+	footer{
+		margin-left: 1.041666666667%;
+		margin-right: 1.041666666667%;
+	}
+
+	.perfiles figure{
+		margin-right: 6.66666666666667%;
+		width: 20%;
+	}
+
+	.perfiles figure:nth-of-type(2n){
+		margin-right: 6.66666666666667%;
+	}
+
+	.perfiles figure:nth-of-type(4n){
+		margin-right: 0;
+	}
+
+	.producto{
+		float: left;
+		width: 48%;
+		margin-right: 4%;
+	}
+	.producto:nth-of-type(2n){
+		margin-right: 0;
+	}
+
+}
+
+
+
+@media screen and (min-width: 700px){
+
+	.producto{
+		width: 31.914893617021%; /*300px entre 940px (el contenedor tiene 10px de margen en los laterales)*/
+		margin-right: 2.1276595744685%;
+	}
+
+	.producto:nth-of-type(2n){
+		margin-right: 2.1276595744685%;
+	}
+
+	.producto:nth-of-type(3n){
+		margin-right: 0;
+	}
+
+	footer ul{
+		text-align: center;
+	}
+
+	footer ul li{
+		display: inline-block; /* se parece a la flotación pero genera un margen lateral derecho de 4px entre cada elemento*/
+	}
+
+	footer a{
+		border-bottom: none;
+		font-size: 1.2em;
+		padding: 1.2em;
+		border-right: solid 1px #fff;
+	}
+
+	footer ul li:last-child a{
+		border-right: none;
+	}
+
+}
+
+
+
+@media screen and (min-width: 950px){
+
+	.video{
+		padding-top: 0;
+		height: 265px;
+		margin-bottom: 5%;
+		float: left;
+		width: 64.583333333333%;
+	}
+
+	.perfiles{
+		float: left;
+		width: 31.25%;
+	}
+
+	.productos-vip{
+		clear: both;
+		/*limpia la flotación entre elementos hermanos*/
+	}
+
+}
